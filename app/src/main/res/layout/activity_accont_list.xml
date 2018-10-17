@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/accont_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="-5dp"
+            android:background="#757675"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="账单记录（点击查看详情）"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="编号"
+            android:textColor="#000"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:text="消费金额"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="消费日期"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            />
+        </LinearLayout>
+        <com.develop.xdk.df.nfcmachine.entity.MyList.MyListView
+            android:id="@+id/accont_list_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/accont_list_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="返           回"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="30sp"
+            android:textColor="#FFF"
+            android:background="@drawable/my_button"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#000"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:id="@+id/item_list_numb"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:id="@+id/item_list_nume"/>
+    <TextView
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:text="消费金额"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:id="@+id/item_list_consume_money"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="消费日期"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:id="@+id/item_list_date"/>
+
+</LinearLayout>

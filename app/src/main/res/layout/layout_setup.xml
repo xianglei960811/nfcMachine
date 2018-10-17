@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/setup_cont"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="40dp"
+            android:background="#757675"
+            android:gravity="center_vertical"
+            android:text="参数配置"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="机器号："
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/set_up_machine"
+                android:maxLength="10"
+                android:backgroundTint="#000000"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="电脑号："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/set_up_computer"
+                android:maxLength="10"
+                android:backgroundTint="#000000"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="ip地址："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/set_up_address"
+                android:backgroundTint="#000000"
+                android:maxLength="60"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="单位代码："
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/set_up_clientid"
+                android:backgroundTint="#000000"
+                android:textSize="20sp"
+                android:maxLength="20"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="份饭价格："
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:id="@+id/set_up_price"
+                android:textSize="20sp"
+                android:backgroundTint="#000000"
+                android:maxLength="10"
+                android:inputType="number|numberDecimal"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="元"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="设置密码："
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/set_up_password"
+                android:backgroundTint="#000000"
+                android:textSize="20sp"
+                android:maxLength="20"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="*设置保存后app会自动关闭，需要重启清理缓存！"
+                android:textSize="15sp"
+                android:textColor="#CC0000"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_button"
+                android:textColor="#FFF"
+                android:text="保存"
+                android:id="@+id/set_up_save"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/set_up_back"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_button"
+                android:textColor="#FFF"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
