@@ -242,7 +242,7 @@ public class PayMoneyActivity extends BaseActivity {
         } else if (payMoneyNumber.getText().toString().isEmpty()) {
             payMoneyTvHint.setText("提示：请输入付款金额");
         } else if (!IsMoney.checkMoney(money)) {
-            payMoneyTvHint.setText("提示：消费金额必须大于0");
+            payMoneyTvHint.setText("提示：请输入正确的消费金额");
         } else{
             if (Arith.sub(Double.valueOf(pdSubsidyMoney.getText().toString())+Double.valueOf(pdCashMoney.getText().toString()),Double.valueOf(money)) >=0) {//利用Arith作精确的double运算
                 payInfo = "姓名：" + payMoneyName.getText().toString().trim() + "\n" +

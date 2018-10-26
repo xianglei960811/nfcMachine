@@ -83,7 +83,7 @@ public class MyListView extends ListView implements AbsListView.OnScrollListener
         foot.findViewById(R.id.foot_view).setVisibility(View.GONE);
     }
     public interface MyLoadListner {
-        public void onload();
+         void onload();
     }
 
 }

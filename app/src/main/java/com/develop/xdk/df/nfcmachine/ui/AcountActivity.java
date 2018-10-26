@@ -44,13 +44,14 @@ public class AcountActivity extends BaseActivity {
     private int noHandleTotal;//未上传记录数
     private BaseProgressDialog myPD;
     private List<AccountUser> accountUsers = new ArrayList<>();
-ToastUntil toastUntil = new ToastUntil(this);
+    ToastUntil toastUntil = new ToastUntil(this);
+
     @Override
     protected void initView() {
         myPD = MyProgressDialog.createe(this, C.TIME_WAITING_CONNECT, new BaseProgressDialog.OnTimeOutListener() {
             @Override
             public void onTimeOut(ProgressDialog dialog) {
-               toastUntil.ShowToastShort( "链接超时");
+                toastUntil.ShowToastShort("链接超时");
             }
         });
         myPD.show();
@@ -58,7 +59,7 @@ ToastUntil toastUntil = new ToastUntil(this);
         accontTotal = 0;
         noHandleTotal = 0;
 
-        final int mode =1;
+        final int mode = 1;
         accountUsers = sqlControl.getAccont(mode);
         if (accountUsers != null && !accountUsers.isEmpty()) {//记录不为空时执行
             accontTotal = accountUsers.size();
@@ -71,7 +72,7 @@ ToastUntil toastUntil = new ToastUntil(this);
                 }
             }
             accountUsers.clear();
-        }else {
+        } else {
             toastUntil.ShowToastShort("没有消费信息");
         }
 

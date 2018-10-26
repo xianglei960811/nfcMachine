@@ -8,7 +8,10 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
+import com.develop.xdk.df.nfcmachine.R;
 import com.develop.xdk.df.nfcmachine.constant.C;
+import com.develop.xdk.df.nfcmachine.entity.Dialog.Loading.timeOutListner;
+import com.develop.xdk.df.nfcmachine.entity.Dialog.LoadingDialog;
 
 /**
  * Created by liukun on 16/3/10.
@@ -18,7 +21,7 @@ public class ProgressDialogHandler extends Handler {
     public static final int SHOW_PROGRESS_DIALOG = 1;
     public static final int DISMISS_PROGRESS_DIALOG = 2;
 
-    private ProgressDialog pd;
+    private LoadingDialog pd;
 
     private Context context;
     private boolean cancelable;
@@ -34,7 +37,12 @@ public class ProgressDialogHandler extends Handler {
 
     private void initProgressDialog(){
         if (pd == null) {
-            pd = new ProgressDialog(context);
+            pd = new LoadingDialog(context, R.style.NormalDialogStyle, 60, new timeOutListner() {
+                @Override
+                public void onTimeOut(String msg) {
+                    mProgressCancelListener.onCancelProgress();
+                }
+            });
 
             pd.setCancelable(cancelable);
 

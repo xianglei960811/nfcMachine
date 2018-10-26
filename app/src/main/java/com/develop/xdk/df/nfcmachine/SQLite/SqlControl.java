@@ -123,6 +123,23 @@ public class SqlControl {
     }
 
     /**
+     * 微信，支付宝等第三方扫码支付记录
+     * @param type
+     * @param consumMoey
+     */
+    public void inserScanConsume(String type,Double consumMoey){
+        myPD.show();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(C.C_NAME_NAME,type);
+        contentValues.put(C.C_CONSUME_MONEY_NAME,consumMoey);
+        contentValues.put(C.C_IS_ONLINE_NAME,C.IS_ONLINE);
+        contentValues.put(C.C_IS_HANDLE_NAME,"true");
+        contentValues.put(C.C_DATA_NAME,GetNETtime.getInsance().getAllData());
+        BaseConsumeDB.getInstance(context).InsertConsume(contentValues);
+        contentValues.clear();
+        myPD.dismiss();
+    }
+    /**
      * 查询本地所有消费数据并上传云作处理,
      * 差询本地所有消费记录并存入list后返回
      */

@@ -7,7 +7,9 @@ import android.util.Log;
 
 import com.develop.xdk.df.nfcmachine.MainActivity;
 
-
+/**
+ * 开机启动
+ */
 public class SelfStartReceiver extends BroadcastReceiver {
     public SelfStartReceiver() {
     }
@@ -16,7 +18,7 @@ public class SelfStartReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED"))
         {
-            Log.e("dd", "onReceive: 开机了" );
+            Log.i("dd", "onReceive: 开机了" );
             Intent i = new Intent(context, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);

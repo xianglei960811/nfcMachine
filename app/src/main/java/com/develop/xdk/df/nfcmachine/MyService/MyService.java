@@ -68,11 +68,10 @@ public class MyService extends Service {
      */
     public void startDown() {
         C.USER_MESSAGE_NUMBER = 0;//初始化
-
         RechargeController.getInstance().receiptAll(new SubscriberOnNextListener<List<NfcUser>>() {
             @Override
             public void onNext(final List<NfcUser> pd) {
-                Log.d("service", "onNext: " + new Gson().toJson(pd));
+//                Log.d("service", "onNext: " + new Gson().toJson(pd));
                  final LocalUser localUser = new LocalUser();
                 max_progress = pd.size();
                  final Runnable runn = new Runnable() {

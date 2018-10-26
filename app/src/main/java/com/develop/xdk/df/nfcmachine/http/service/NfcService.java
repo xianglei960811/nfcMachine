@@ -46,6 +46,6 @@ public interface NfcService {
     Observable<HttpResult<String>> checkOnline(@Body BaseParam param);
 
     //扫码支付
-    @POST("user/info")
-    Observable<HttpResult<String>> scanPay(@Body BaseParam param);
+    @POST("user/comsume/nfc/code")
+    Observable<HttpResult<PersonDossier>> scanPay(@Body BaseParam param);
 }

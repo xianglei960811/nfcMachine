@@ -51,7 +51,7 @@ public class BaseUserDB extends BaseDB implements TableColumns.USER_COLUMNS {
      *
      * @param cv
      */
-    public void InsertUser(ContentValues cv) {
+    public synchronized void InsertUser(ContentValues cv) {
         if (db == null || !db.isOpen()) {
             db = getWritableDatabase();
         }
@@ -79,7 +79,7 @@ public class BaseUserDB extends BaseDB implements TableColumns.USER_COLUMNS {
      * @param limit 分页查询 格式："" + startIdex + "," + endIndex + ""
      * @return 返回cursor
      */
-    public List<LocalUser> selectUser(String selectionID, String[] valus, String groupBy, String having, String orderBy, String limit) {
+    public synchronized List<LocalUser> selectUser(String selectionID, String[] valus, String groupBy, String having, String orderBy, String limit) {
         Cursor cursor = null;
         List<LocalUser> lists = new ArrayList<>();
         String[] users = new String[]{C.U_CARD_ID_NAME, C.U_NAME_NAME, C.U_CASH_MONEY_NAME, C.U_SUBSIDY_MONEY_NAME,
@@ -128,7 +128,7 @@ public class BaseUserDB extends BaseDB implements TableColumns.USER_COLUMNS {
      * @param whereId 查询条件
      * @param valus 条件中用了占位符的参数
      */
-    public void updataUser(ContentValues cv, String whereId, String[] valus) {
+    public synchronized void updataUser(ContentValues cv, String whereId, String[] valus) {
         if (db == null || !db.isOpen()) {
             db = getWritableDatabase();
         }
@@ -153,7 +153,7 @@ public class BaseUserDB extends BaseDB implements TableColumns.USER_COLUMNS {
      * @param whereArgs  删除条件
      * @param valus    条件中用了占位符的参数
      */
-    public void clearUser(String whereArgs, String[] valus) {
+    public synchronized void clearUser(String whereArgs, String[] valus) {
         if (db == null || !db.isOpen()) {
             db = getWritableDatabase();
         }

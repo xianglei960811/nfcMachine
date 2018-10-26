@@ -107,6 +107,7 @@ public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCanc
             Message msg = Message.obtain();
             msg.obj = message;
             msg.what = 2;
+            Log.e("subcriberssssssssss", "onError: ------------->." + e.getMessage());
             activity.mainHandler.sendMessage(msg);
         }else {
             toastUntil.ShowToastShort(message);

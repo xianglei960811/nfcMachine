@@ -1,7 +1,6 @@
-package com.develop.xdk.df.nfcmachine.entity.PayLoading;
+package com.develop.xdk.df.nfcmachine.entity.Dialog.Loading;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;

@@ -81,13 +81,77 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/scan_ll_money"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="补助余额:"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="0.00"
+                        android:id="@+id/scan_subsidy_money"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="20sp"
+                        android:textColor="#FF4500"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:text="元"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="消费余额:"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="0.00"
+                        android:id="@+id/scan_cash_money"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="20sp"
+                        android:textColor="#FF4500"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:text="元"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="50dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/bt_scan_back"

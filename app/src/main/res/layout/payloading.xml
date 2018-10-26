@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
 
-        <com.develop.xdk.df.nfcmachine.entity.PayLoading.LoadingBar
+        <com.develop.xdk.df.nfcmachine.entity.Dialog.Loading.LoadingBar
             android:id="@+id/scan_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

@@ -227,6 +227,7 @@ public class AccontListActivity extends BaseActivity implements MyListView.MyLoa
             Log.e(TAG, "showAccontDialog: "+e.getMessage() );
 ////            e.printStackTrace();
         }
+
         dialog.setContentView(view);
         dialog.setCanceledOnTouchOutside(false);
 

@@ -26,7 +26,7 @@ public class MySqliteHelp extends SQLiteOpenHelper implements TableColumns{
     public static final String CREAT_TABLE_CONSUME = "CREATE TABLE IF NOT EXISTS "+CONSUME_COUMNS.TABLE_USERS
             +"("
             +CONSUME_COUMNS.FIELD_ID+" integer not null primary key autoincrement,"
-            +CONSUME_COUMNS.FIELD_CARD_ID+" vachar(200) not null,"
+            +CONSUME_COUMNS.FIELD_CARD_ID+" vachar(200) ,"
             +CONSUME_COUMNS.FIELD_NAME+" vachar(200),"
             +CONSUME_COUMNS.FIELD_CASH_MONEY+" double,"
             +CONSUME_COUMNS.FIELD_SUBSIDY_MONEY+" double,"

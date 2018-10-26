@@ -55,7 +55,7 @@ public class BaseConsumeDB extends BaseDB implements TableColumns.CONSUME_COUMNS
      * @param limit 分页查询 格式："" + startIdex + "," + endIndex + ""
      * @return 返回cursor
      */
-    public List<AccountUser> selectconsume(String selectionID, String[] valus, String groupBy, String having, String orderBy, String limit) {
+    public synchronized List<AccountUser> selectconsume(String selectionID, String[] valus, String groupBy, String having, String orderBy, String limit) {
 //        Log.e("all", "selectconsume: " );
         Cursor cursor = null;
         List<AccountUser> lists = new ArrayList<>();
@@ -109,7 +109,7 @@ public class BaseConsumeDB extends BaseDB implements TableColumns.CONSUME_COUMNS
      * @param whereId 查询条件
      * @param valus 条件中用了占位符的参数
      */
-    public void updataConsume(ContentValues cv, String whereId, String[] valus) {
+    public synchronized void updataConsume(ContentValues cv, String whereId, String[] valus) {
         if (db == null || !db.isOpen()) {
             db=getWritableDatabase();
         }
@@ -134,7 +134,7 @@ public class BaseConsumeDB extends BaseDB implements TableColumns.CONSUME_COUMNS
      *
      * @param cv
      */
-    public void InsertConsume(ContentValues cv) {
+    public synchronized void InsertConsume(ContentValues cv) {
         if (db == null || !db.isOpen()) {
             db=getWritableDatabase();
         }
@@ -156,7 +156,7 @@ public class BaseConsumeDB extends BaseDB implements TableColumns.CONSUME_COUMNS
      *   清除表consume的数据
      * @param sql  执行的sql语句
      */
-    public void clearConsume(String sql) {
+    public synchronized void clearConsume(String sql) {
         if (db == null || !db.isOpen()) {
             db=getWritableDatabase();
         }

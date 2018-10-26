@@ -233,7 +233,7 @@ public class RechargeController {
         SortedMap map = BeanUtil.ClassToMap(param);
         param.setSign(SignUtil.createSign(map, C.SIGN_KEY));
         Observable observable = NfcService.scanPay(param)
-                .map(new HttpResultFunc<String>());
+                .map(new HttpResultFunc<PersonDossier>());
         toSubscribe(observable, subscriber);
         Log.d("scanpay", new Gson().toJson(param));
     }
